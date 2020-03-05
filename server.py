@@ -24,7 +24,8 @@ def login():
     else:
         return jsonify('Unauthorized'), 401
 
-    # This should be hashed in real life:
+    # This would be hashed in real life, before being transmitted
+    # in plain text json. Here is an example of python hashing:
     #   import hashlib
     #   digest = hashlib.md5(content['password'].encode().hexdigest())
     #   Then compare the digest and the PASSWORD digest for equality.
